@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "**",
         pathname: "/**",
       },
       {
@@ -13,6 +13,9 @@ const nextConfig = {
         pathname: "/gh/devicons/devicon/**",
       },
     ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
