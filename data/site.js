@@ -9,7 +9,7 @@ export const site = {
   location: "Khulna, Bangladesh",
   resumeUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
   profileImage: {
-    src: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80",
+    src: "/profile.jpg",
     alt: "Professional headshot of Zaber Abdullah",
   },
   socials: {
