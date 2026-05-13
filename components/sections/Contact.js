@@ -181,15 +181,6 @@ export function Contact() {
                   <Facebook className="h-4 w-4" />
                   Facebook
                 </Link>
-                <Link
-                  href={site.socials.twitter}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-ghost btn-sm rounded-full border border-border/60"
-                >
-                  <X className="h-4 w-4" />
-                  X
-                </Link>
               </div>
             </div>
           </div>

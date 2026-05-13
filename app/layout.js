@@ -19,8 +19,8 @@ const siteUrl = "https://example.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Alex Rivera — Full Stack Developer",
-    template: "%s | Alex Rivera",
+    default: "Zaber Abdullah — Full Stack Developer",
+    template: "%s | Zaber Abdullah",
   },
   description:
     "Minimal, production-ready developer portfolio focused on modern web experiences, performance, and accessibility.",
@@ -32,13 +32,13 @@ export const metadata = {
     "JavaScript",
     "Full Stack",
   ],
-  authors: [{ name: "Alex Rivera" }],
+  authors: [{ name: " Zaber Abdullah" }],
   openGraph: {
-    title: "Alex Rivera — Full Stack Developer",
+    title: "Zaber Abdullah — Full Stack Developer",
     description:
       "Clean, responsive portfolio showcasing projects, experience, and skills.",
     url: siteUrl,
-    siteName: "Alex Rivera",
+    siteName: "Zaber Abdullah",
     locale: "en_US",
     type: "website",
   },

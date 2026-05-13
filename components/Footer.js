@@ -54,15 +54,6 @@ export function Footer() {
             >
               <Facebook className="h-4 w-4" />
             </Link>
-            <Link
-              href={site.socials.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-ghost btn-square btn-sm"
-              aria-label="X"
-            >
-              <X className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </div>

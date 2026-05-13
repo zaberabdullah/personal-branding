@@ -12,7 +12,6 @@ const socials = [
   { href: site.socials.github, label: "GitHub", Icon: Github },
   { href: site.socials.linkedin, label: "LinkedIn", Icon: Linkedin },
   { href: site.socials.facebook, label: "Facebook", Icon: Facebook },
-  { href: site.socials.twitter, label: "X", Icon: X },
   { href: site.socials.mail, label: "Email", Icon: Mail },
 ];
 
@@ -31,9 +30,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/55">
-            Portfolio
-          </p>
+        
           <h1 className="mt-3 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             {site.name}
           </h1>
