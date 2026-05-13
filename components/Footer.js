@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="text-sm font-semibold tracking-tight text-foreground">{site.name}</div>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-foreground/60">
-            Full stack engineer focused on calm interfaces, solid architecture, and measurable outcomes.
+            Full Stack Developer focused on building clean, user-centric web applications with modern technologies.
           </p>
         </div>
 

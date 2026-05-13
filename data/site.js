@@ -2,7 +2,7 @@ export const site = {
   name: "Zaber Abdullah",
   title: "Full Stack Developer",
   tagline:
-    "I craft calm, fast web interfaces and dependable APIs—focused on clarity, accessibility, and maintainable systems.",
+   "I craft clean, user-centric web applications and robust back-end systems—focused on modern tech stacks and impactful solutions.",
   email: "zaberabdullah120@gmail.com",
   phone: "01521251408",
   whatsapp: "01934888324",
@@ -10,7 +10,7 @@ export const site = {
   resumeUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
   profileImage: {
     src: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80",
-    alt: "Professional headshot of Alex Rivera",
+    alt: "Professional headshot of Zaber Abdullah",
   },
   socials: {
     github: "https://github.com/zaberabdullah",
