@@ -17,10 +17,7 @@ const socials = [
 
 export function Hero() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden border-b border-border/60 scroll-mt-24"
-    >
+    <section id="home" className="relative overflow-hidden border-b border-border/60 scroll-mt-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_-10%,color-mix(in_oklab,var(--accent)_18%,transparent),transparent)]" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-12 lg:py-24">
@@ -30,7 +27,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-        
           <h1 className="mt-3 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             {site.name}
           </h1>
@@ -40,10 +36,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button
-              variant="primary"
-              onPress={() => window.open(site.resumeUrl, "_blank", "noopener,noreferrer")}
-            >
+            <Button variant="primary" onPress={() => window.open(site.resumeUrl, "_blank", "noopener,noreferrer")}>
               View resume
               <ArrowUpRight className="h-4 w-4" />
             </Button>
@@ -82,7 +75,8 @@ export function Hero() {
               fill
               priority
               sizes="(min-width: 1024px) 420px, (min-width: 640px) 60vw, 92vw"
-              className="object-cover"
+              className="object-cover w-full h-full "
+              style={{ objectPosition: "center 40%"}}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
           </div>
