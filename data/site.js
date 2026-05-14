@@ -10,7 +10,7 @@ export const site = {
   resumeUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
   profileImage: {
     src: "/images/picture.png",
-    alt: "Professional headshot of Zaber Abdullah",
+    alt: "Picture of a legend:)",
   },
   socials: {
     github: "https://github.com/zaberabdullah",
