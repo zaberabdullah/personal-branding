@@ -11,8 +11,7 @@ export function Experience() {
       id="experience"
       eyebrow="Experience"
       title="Where I have contributed."
-      description="A snapshot of recent roles. Each line is written to be recruiter-scannable without noise."
-    >
+    >                    
       {!experience.hasExperience ? (
         <div className="rounded-3xl border border-dashed border-border/70 bg-surface/30 p-10 text-center">
           <h3 className="text-lg font-semibold tracking-tight text-foreground">Open to opportunities</h3>
