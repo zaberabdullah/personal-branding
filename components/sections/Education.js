@@ -10,8 +10,8 @@ export function Education() {
     <Section
       id="education"
       eyebrow="Education"
-      title="Foundations that shaped how I learn."
-      description="Formal training is one input—shipping, reading, and mentoring are the others."
+      title="Academic Background"
+      description="Combining my academic foundation with a strong passion for technology and continuous learning."
     >
       <ol className="relative space-y-6">
         <div className="absolute left-[15px] top-2 bottom-2 w-px bg-border/70 sm:left-[17px]" aria-hidden />
