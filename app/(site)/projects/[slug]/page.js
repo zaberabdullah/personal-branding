@@ -13,12 +13,16 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Project" };
+  
+  const title = project.title || project.name;
+  const desc = project.shortDescription || project.tagline || project.description;
+  
   return {
-    title: project.title,
-    description: project.shortDescription,
+    title: title,
+    description: desc,
     openGraph: {
-      title: project.title,
-      description: project.shortDescription,
+      title: title,
+      description: desc,
       images: [{ url: project.image }],
     },
   };
@@ -28,6 +32,15 @@ export default async function ProjectPage({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+
+  // puran + notun 2 tai support korbe
+  const title = project.title || project.name;
+  const desc = project.description || project.tagline || project.shortDescription;
+  const shortDesc = project.shortDescription || project.tagline || "";
+  const techs = project.tech || project.stack || [];
+  const features = project.features || [];
+  const challenges = project.challenges || [];
+  const improvements = project.improvements || project.future || [];
 
   return (
     <main className="flex-1">
@@ -44,25 +57,25 @@ export default async function ProjectPage({ params }) {
           <div className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/55">Case study</p>
             <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              {project.title}
+              {title}
             </h1>
-            <p className="mt-4 text-pretty text-base leading-relaxed text-foreground/65">{project.description}</p>
+            <p className="mt-4 text-pretty text-base leading-relaxed text-foreground/65">{desc}</p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {project.tech.map((t) => (
+              {techs.map((t) => (
                 <span key={t} className="badge badge-ghost">
                   {t}
                 </span>
               ))}
             </div>
 
-            <ProjectActions liveUrl={project.liveUrl} repoUrl={project.repoUrl} />
+            <ProjectActions liveUrl={project.liveUrl} repoUrl={project.repoUrl} serverRepoUrl={project.serverRepoUrl} />
 
             <div className="mt-12 space-y-10">
               <section>
                 <h2 className="text-sm font-semibold tracking-tight text-foreground">Features</h2>
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/65">
-                  {project.features.map((f) => (
+                  {features.map((f) => (
                     <li key={f} className="flex gap-2">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-foreground/35" aria-hidden />
                       <span>{f}</span>
@@ -74,7 +87,7 @@ export default async function ProjectPage({ params }) {
               <section>
                 <h2 className="text-sm font-semibold tracking-tight text-foreground">Challenges</h2>
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/65">
-                  {project.challenges.map((f) => (
+                  {challenges.map((f) => (
                     <li key={f} className="flex gap-2">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-foreground/35" aria-hidden />
                       <span>{f}</span>
@@ -86,7 +99,7 @@ export default async function ProjectPage({ params }) {
               <section>
                 <h2 className="text-sm font-semibold tracking-tight text-foreground">Future improvements</h2>
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/65">
-                  {project.future.map((f) => (
+                  {improvements.map((f) => (
                     <li key={f} className="flex gap-2">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-foreground/35" aria-hidden />
                       <span>{f}</span>
@@ -102,7 +115,7 @@ export default async function ProjectPage({ params }) {
               <div className="relative aspect-[16/11] w-full border-b border-border/60">
                 <Image
                   src={project.image}
-                  alt=""
+                  alt={title}
                   fill
                   priority
                   sizes="(min-width: 1024px) 520px, 92vw"

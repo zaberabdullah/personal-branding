@@ -9,6 +9,11 @@ import { ArrowUpRight, Github } from "lucide-react";
 export function ProjectCard({ project }) {
   const router = useRouter();
 
+  // puran + notun 2 ta structure handle korbe
+  const title = project.title || project.name || "Untitled";
+  const desc = project.shortDescription || project.tagline || project.description || "";
+  const techs = project.tech || project.stack || [];
+
   return (
     <motion.article
       whileHover={{ y: -3 }}
@@ -18,7 +23,7 @@ export function ProjectCard({ project }) {
       <figure className="relative aspect-[16/10] w-full border-b border-border/60">
         <Image
           src={project.image}
-          alt=""
+          alt={title}
           fill
           sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 92vw"
           className="object-cover"
@@ -28,18 +33,22 @@ export function ProjectCard({ project }) {
 
       <div className="card-body gap-4 p-6">
         <div>
-          <h3 className="card-title text-base font-semibold tracking-tight text-foreground">{project.title}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-foreground/65">{project.shortDescription}</p>
+          <h3 className="card-title text-base font-semibold tracking-tight text-foreground">
+            {title}
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-foreground/65 line-clamp-3">
+            {desc}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {project.tech.slice(0, 4).map((t) => (
+          {techs.slice(0, 4).map((t) => (
             <span key={t} className="badge badge-ghost badge-sm">
               {t}
             </span>
           ))}
-          {project.tech.length > 4 ? (
-            <span className="badge badge-ghost badge-sm">+{project.tech.length - 4}</span>
+          {techs.length > 4 ? (
+            <span className="badge badge-ghost badge-sm">+{techs.length - 4}</span>
           ) : null}
         </div>
 
