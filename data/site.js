@@ -89,34 +89,34 @@ export const education = [
   },
 ];
 
-export const experience = {
-  hasExperience: true,
-  roles: [
-    {
-      company: "Freelance",
-      role: "Professional Translator",
-      duration: "2025 — Present",
-      summary: "Providing English-to-Bengali and Bengali-to-English translation services for diverse clients.",
-      responsibilities: [
-        "Ensuring linguistic accuracy and cultural relevance in translations.",
-        "Managing tight deadlines while maintaining high-quality output.",
-      ],
-      technologies: ["Translation", "Copywriting", "Proofreading"],
-    },
-    {
-      company: "Bangladesh Tourism Board",
-      role: "Intern",
-      duration: "Jan 2023 — May 2023",
-      summary: "Managed and organized comprehensive data for over 300 hotels in the Khulna district.",
-      responsibilities: [
-        "Successfully compiled and updated a database of 300+ hotels for the district tourism board.",
-        "Ensured data accuracy and accessibility for better tourism management and planning.",
-        "Coordinated with various hotel management teams to verify information.",
-      ],
-      technologies: ["Data Management", "Information Organization", "Tourism Research"],
-    },
-  ],
-};
+// export const experience = {
+//   hasExperience: true,
+//   roles: [
+//     {
+//       company: "Freelance",
+//       role: "Professional Translator",
+//       duration: "2025 — Present",
+//       summary: "Providing English-to-Bengali and Bengali-to-English translation services for diverse clients.",
+//       responsibilities: [
+//         "Ensuring linguistic accuracy and cultural relevance in translations.",
+//         "Managing tight deadlines while maintaining high-quality output.",
+//       ],
+//       technologies: ["Translation", "Copywriting", "Proofreading"],
+//     },
+//     {
+//       company: "Bangladesh Tourism Board",
+//       role: "Intern",
+//       duration: "Jan 2023 — May 2023",
+//       summary: "Managed and organized comprehensive data for over 300 hotels in the Khulna district.",
+//       responsibilities: [
+//         "Successfully compiled and updated a database of 300+ hotels for the district tourism board.",
+//         "Ensured data accuracy and accessibility for better tourism management and planning.",
+//         "Coordinated with various hotel management teams to verify information.",
+//       ],
+//       technologies: ["Data Management", "Information Organization", "Tourism Research"],
+//     },
+//   ],
+// };
 
 export const projects = [
   {
@@ -231,7 +231,7 @@ export const navLinks = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "education", label: "Education" },
-  { id: "experience", label: "Experience" },
+  // { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
